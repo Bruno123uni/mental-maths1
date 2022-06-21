@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+        <h2>What is</h2>
+        <span>
+            <h3>{{ number1 }}</h3>
+            <h3> {{ sign }}</h3>
+            <h3>{{ number2 }} ?</h3>
+        </span>
+        <form action="/quiz" method="post">
+        <div class="form-group">
+            <input type="hidden" name = "number1" value="{{ number1}}">
+             <input type="hidden" name = "op" value="{{ op }}">
+            <input type="hidden" name = "an1s" value="{{ ans }}">
+            <input type="hidden" name = "number2" value="{{ number2}}">
+            <input autocomplete="off" autofocus class="form-control" name="ans" placeholder="Your Answer" type="number" step="any">
+        </div>
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+    <h3>{{message}}</h3>
+    <span><h2>{{m}}</h2><h3>{{answer}}</h3></span>
+   <span><h5>{{s}}</h5><h4>{{a}}</h4></span>
+{% endblock %}

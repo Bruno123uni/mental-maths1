@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <form action="/quizoptions" method="post">
+        <div class="form-group">
+            <select class="form-control" name="Operation">
+                <option disabled selected value="">Operation</option>
+                    <option value="Division">Division</option>
+                    <option value="Multiplication">Multiplication</option>
+                    <option value="Addition">Addition</option>
+                    <option value="Subtraction">Subtraction</option>
+            </select>
+        </div>
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+{% endblock %}

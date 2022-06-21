@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block main %}
+<h1>Score board</h1>
+<table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Username</th>
+                <th>Points</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in di %}
+                <tr>
+                        <td>{{i}}</td>
+                        <td>{{rows[i-1]["username"]}}</td>
+                        <td>{{rows[i-1]["points"]}}</td>
+                </tr>
+            {% endfor %}
+
+{% endblock %}
